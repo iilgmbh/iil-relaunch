@@ -80,7 +80,7 @@
     "urls": {
       "prod": "https://bieterpilot.de",
       "staging": "https://staging-ausschreibungs.iil.pet",
-      "dev": "http://localhost:8101"
+      "dev": "http://88.99.38.75:8092/pilot-dashboard/"
     }
   },
   {
