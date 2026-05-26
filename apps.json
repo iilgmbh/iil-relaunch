@@ -362,5 +362,19 @@
       "staging": null,
       "dev": "http://88.99.38.75:8765/genesor/lineage-pg-hub.html"
     }
+  },
+  {
+    "name": "Design-Hub",
+    "repo": "design-hub",
+    "desc": "Konzern-konforme Dokumentvorlagen: 3 Profile (IIL-extern, DB-hybrid, DB-intern), 428 Icons, 82 Illustrations, DBNeoScreen-Fonts, Asset-Browser + Markdown-Pseudo-Tags.",
+    "icon": "palette",
+    "color": { "bg": "rgba(236,72,153,0.12)", "fg": "#ec4899" },
+    "tags": ["Design", "Templates", "Plattform-Tool"],
+    "status": "dev",
+    "urls": {
+      "prod": null,
+      "staging": null,
+      "dev": "https://dev-hub.iil.pet/design-hub/"
+    }
   }
 ]
