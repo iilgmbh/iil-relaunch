@@ -306,5 +306,61 @@
       "staging": "https://staging-odoo.iil.pet",
       "dev": "http://localhost:8069"
     }
+  },
+  {
+    "name": "Meiki – Bürgerportal (LRA)",
+    "repo": "meiki-hub",
+    "desc": "Landratsamts-Workloads: Wohngeld, UVG, Asyl, Fristenmanagement. Klickdummy-SSoT für alle Orgs.",
+    "icon": "scale",
+    "color": { "bg": "rgba(6,102,204,0.12)", "fg": "#0666cc" },
+    "tags": ["LRA", "Klickdummy-SSoT", "Public Sector"],
+    "status": "dev",
+    "urls": {
+      "prod": null,
+      "staging": null,
+      "dev": "http://88.99.38.75:8765/genesor/lineage-meiki-hub.html"
+    }
+  },
+  {
+    "name": "TTZ – Werkleiter & Schichtleitung",
+    "repo": "ttz-hub",
+    "desc": "Government / public-sector workloads. Data-sovereignty + Klickdummies für Werkleiter-Skizze und Schichtleitung-Cockpit.",
+    "icon": "factory",
+    "color": { "bg": "rgba(0,153,51,0.12)", "fg": "#009933" },
+    "tags": ["Public Sector", "Klickdummy"],
+    "status": "dev",
+    "urls": {
+      "prod": null,
+      "staging": null,
+      "dev": "http://88.99.38.75:8766/"
+    }
+  },
+  {
+    "name": "NL2IOT – Natural-Language IoT",
+    "repo": "nl2iot-hub",
+    "desc": "NL-zu-SPS/IoT-Übersetzer: Freitext-Anforderungen → PLCopen-XML + Developer-Cockpit. Customer-Pilot 2026.",
+    "icon": "cpu",
+    "color": { "bg": "rgba(168,85,247,0.12)", "fg": "#a855f7" },
+    "tags": ["IoT", "AI", "Pilot"],
+    "status": "dev",
+    "urls": {
+      "prod": null,
+      "staging": null,
+      "dev": "http://88.99.38.75:8765/genesor/lineage-nl2iot-hub.html"
+    }
+  },
+  {
+    "name": "PG-Hub – Pocket Governance",
+    "repo": "pg-hub",
+    "desc": "Klickdummy-Prototyp für leichtgewichtige Compliance-Governance.",
+    "icon": "shield-check",
+    "color": { "bg": "rgba(234,179,8,0.12)", "fg": "#eab308" },
+    "tags": ["Governance", "Klickdummy"],
+    "status": "dev",
+    "urls": {
+      "prod": null,
+      "staging": null,
+      "dev": "http://88.99.38.75:8765/genesor/lineage-pg-hub.html"
+    }
   }
 ]
