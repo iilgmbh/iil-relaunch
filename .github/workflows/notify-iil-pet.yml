@@ -1,0 +1,29 @@
+name: Notify iil-pet-portal
+
+# Cross-Repo-Trigger: Wenn apps.json hier ändert, automatisch iil-pet-portal
+# rebuilden — sonst zeigt iil.pet veraltete Tile-Liste bis manuell ein
+# `gh workflow run "Deploy iil.pet"` getriggert wird.
+#
+# Setup-Voraussetzung: Org-Secret `IIL_PET_DISPATCH_TOKEN` mit einem PAT,
+# der `workflow:write` auf iilgmbh/iil-pet-portal hat. Wird beim ersten
+# Run mit Fehler 401 sichtbar werden (gracefully degraded).
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'apps.json'
+  workflow_dispatch:
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger iil-pet-portal deploy
+        env:
+          GH_TOKEN: ${{ secrets.IIL_PET_DISPATCH_TOKEN || secrets.GITHUB_TOKEN }}
+        run: |
+          # apps.json hat sich geändert → iil.pet muss rebuild
+          gh workflow run "Deploy iil.pet" -R iilgmbh/iil-pet-portal && \
+            echo "✓ iil-pet-portal deploy getriggert (apps.json drift)" || \
+            { echo "⚠ Cross-repo dispatch fehlgeschlagen — IIL_PET_DISPATCH_TOKEN nötig (workflow:write auf iilgmbh/iil-pet-portal)"; exit 0; }
