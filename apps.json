@@ -196,7 +196,7 @@
     "urls": {
       "prod": "https://writing.iil.pet",
       "staging": null,
-      "dev": "http://localhost:8097"
+      "dev": "http://88.99.38.75:8095"
     }
   },
   {
