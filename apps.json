@@ -400,6 +400,26 @@
     }
   },
   {
+    "name": "Decks",
+    "repo": "decks-hub",
+    "desc": "Vorträge, Lehr-Module und Webinare als Slidev-Decks. PDF-Export mit auswählbaren Folien-Sets.",
+    "icon": "chart",
+    "color": {
+      "bg": "rgba(14,165,233,0.12)",
+      "fg": "#0ea5e9"
+    },
+    "tags": [
+      "Slidev",
+      "Vorträge"
+    ],
+    "status": "dev",
+    "urls": {
+      "prod": "https://decks-hub.iil.pet",
+      "staging": null,
+      "dev": "http://localhost:8112"
+    }
+  },
+  {
     "name": "Dev Hub",
     "repo": "dev-hub",
     "desc": "Developer-Portal: CI/CD-Dashboard, Deployment-Status und Plattform-Monitoring.",
