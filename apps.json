@@ -463,7 +463,7 @@
     "name": "Meiki – Bürgerportal (LRA)",
     "repo": "meiki-hub",
     "desc": "Landratsamts-Workloads: Wohngeld, UVG, Asyl, Fristenmanagement. Klickdummy-SSoT für alle Orgs.",
-    "icon": "scale",
+    "icon": "clipboard",
     "color": {
       "bg": "rgba(6,102,204,0.12)",
       "fg": "#0666cc"
@@ -484,7 +484,7 @@
     "name": "TTZ – Werkleiter & Schichtleitung",
     "repo": "ttz-hub",
     "desc": "Government / public-sector workloads. Data-sovereignty + Klickdummies für Werkleiter-Skizze und Schichtleitung-Cockpit.",
-    "icon": "factory",
+    "icon": "grid",
     "color": {
       "bg": "rgba(0,153,51,0.12)",
       "fg": "#009933"
@@ -504,7 +504,7 @@
     "name": "NL2IOT – Natural-Language IoT",
     "repo": "nl2iot-hub",
     "desc": "NL-zu-SPS/IoT-Übersetzer: Freitext-Anforderungen → PLCopen-XML + Developer-Cockpit. Customer-Pilot 2026.",
-    "icon": "cpu",
+    "icon": "cog",
     "color": {
       "bg": "rgba(168,85,247,0.12)",
       "fg": "#a855f7"
@@ -525,7 +525,7 @@
     "name": "PG-Hub – Pocket Governance",
     "repo": "pg-hub",
     "desc": "Klickdummy-Prototyp für leichtgewichtige Compliance-Governance.",
-    "icon": "shield-check",
+    "icon": "shield",
     "color": {
       "bg": "rgba(234,179,8,0.12)",
       "fg": "#eab308"
