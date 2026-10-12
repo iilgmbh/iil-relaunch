@@ -22,22 +22,29 @@ jobs:
 
             REPO_DIR=/opt/iil-ai-repo
             PUBLIC_DIR=/opt/iil-ai/public
-            REPO_URL=https://github.com/achimdehnert/iil-relaunch.git
+            REPO_URL=https://github.com/iilgmbh/iil-relaunch.git
 
-            # Clone or pull latest (public repo — no auth needed)
+            # Clone or pull latest (public repo — no auth needed).
+            # Remote bei jedem Lauf auf REPO_URL setzen: Der Klon zeigte noch auf
+            # achimdehnert/… per SSH-Deploy-Key, der nach dem Org-Umzug fehlt —
+            # alle Deploys seit Mai 2026 scheiterten an "Permission denied (publickey)".
             if [ -d "$REPO_DIR/.git" ]; then
-              cd $REPO_DIR && git pull origin main
+              cd $REPO_DIR
+              git remote set-url origin "$REPO_URL"
+              git pull --ff-only origin main
             else
-              git clone $REPO_URL $REPO_DIR
+              git clone "$REPO_URL" "$REPO_DIR"
             fi
 
-            # Sync files to public dir
+            # Nur die Website ausliefern (Positivliste): Seiten und apps.json.
+            # Repo-Dateien wie AGENT_HANDOVER.md, CHANGELOG.md, serve.py oder
+            # .windsurf/ gehoeren nicht in den Webroot; --delete-excluded raeumt
+            # dort liegende Altbestaende mit ab.
             mkdir -p $PUBLIC_DIR
-            rsync -a --delete \
-              --exclude='.git' \
-              --exclude='.github' \
-              --exclude='nginx' \
-              --exclude='README.md' \
+            rsync -a --delete --delete-excluded \
+              --include='*.html' \
+              --include='apps.json' \
+              --exclude='*' \
               $REPO_DIR/ $PUBLIC_DIR/
 
             # Reload nginx
